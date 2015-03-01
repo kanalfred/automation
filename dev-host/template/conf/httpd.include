@@ -1,0 +1,13 @@
+<VirtualHost 192.168.3.111:80>
+
+        ServerAdmin  "alfredkan@gmail.com"
+        ServerName   template.dev.alfredkan.com:80
+        #ServerAlias  dev.alfredkan.com
+        DocumentRoot /var/www/vhosts/dev/template/httpdocs
+
+        CustomLog  /var/www/vhosts/dev/template/logs/access_log combined
+        ErrorLog  /var/www/vhosts/dev/template/logs/error_log
+
+        Include /var/www/vhosts/dev/template/conf/vhost.conf
+
+</VirtualHost>
