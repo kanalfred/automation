@@ -25,6 +25,10 @@
 /sbin/iptables -A INPUT -p tcp -m tcp --dport 993 -j ACCEPT
 #ShellInAbox
 /sbin/iptables -A INPUT -p tcp -m tcp --dport 4200 -j ACCEPT
+#SSH Tunnel Extra port 
+/sbin/iptables -A INPUT -m state --state NEW -p tcp --dport 1900 -j ACCEPT
+/sbin/iptables -A INPUT -m state --state NEW -p tcp --dport 1901 -j ACCEPT
+/sbin/iptables -A INPUT -m state --state NEW -p tcp --dport 1902 -j ACCEPT
 #Related
 /sbin/iptables -A INPUT -p icmp -j ACCEPT
 /sbin/iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
