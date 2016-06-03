@@ -29,6 +29,9 @@
 /sbin/iptables -A INPUT -m state --state NEW -p tcp --dport 1900 -j ACCEPT
 /sbin/iptables -A INPUT -m state --state NEW -p tcp --dport 1901 -j ACCEPT
 /sbin/iptables -A INPUT -m state --state NEW -p tcp --dport 1902 -j ACCEPT
+#Accept localhost internal traffic
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A OUTPUT -o lo -j ACCEPT
 #Related
 /sbin/iptables -A INPUT -p icmp -j ACCEPT
 /sbin/iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
