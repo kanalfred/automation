@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+# Cron
+# 01 00 * * * perl /usr/local/bin/backupDB.pl
 ############ Config Vars #############################
 
 $mysqluser="admin";  # Mysql user with root access
